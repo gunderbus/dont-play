@@ -9,7 +9,12 @@ void Level::update() {
 void Level::render() {
     // TODO: implement level rendering.
     // For now, print a placeholder message.
-    std::cout << "Level::render() not implemented yet" << std::endl;
+    for (int i = 0; i < width_; ++i) {
+        for (int j = 0; j < height_; ++j) {
+            std::cout << tiles_[i][j] << " ";
+        }
+        std::cout << std::endl;
+    }
 }
 
 void Level::testPrint() {
