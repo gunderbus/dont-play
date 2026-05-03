@@ -1,15 +1,18 @@
 #pragma once
-#include <iostream>
 #include <string>
+#include <vector>
+#include "../block/block.hpp"
+
+class Level;
 
 class player {
 public:
-    player(std::string name, int health) : name_(name), health_(health) {}
+    player(std::string name, int health);
 
     void update();
     void render();
 
-    block getLookedAtBlock(level givenLevel);
+    block getLookedAtBlock(const Level& givenLevel);
     void move(float deltaTime);
     void jump(float deltaTime);
     void takeDamage(int damage);
@@ -18,11 +21,11 @@ public:
     std::string getName();
 
 private:
-    std::string name_; // Name of the player
-    int health_; // Health of the player
+    std::string name_;
+    int health_;
 
-    std::vector<float> position_; // Position of the player in the level (x, y)
-    std::vector<float> velocity_; // Velocity of the player (x, y)
-    std::vector<float> acceleration_; // Acceleration of the player (x, y)
-    std::vector<float> lookVector_; // Direction the player is looking (x, y)
-}
+    std::vector<float> position_;
+    std::vector<float> velocity_;
+    std::vector<float> acceleration_;
+    std::vector<float> lookVector_;
+};
