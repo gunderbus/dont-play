@@ -24,7 +24,7 @@ private:
     int width_;
     int height_;
 
-    std::map<std::string, std::string> tileTypes_; // Map to hold tile types and their properties
+    std::map<std::string, block> tileTypes_; // Map to hold tile types and their properties
 
     // 2D array to hold tile information
     std::string tiles_[100][100]; // Assuming a maximum size of 100x100 for simplicity
