@@ -7,6 +7,7 @@ class player;
 
 class block {
 public:
+    block() = default;
     block(std::string name, std::string description);
 
     void update();
