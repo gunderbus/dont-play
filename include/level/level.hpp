@@ -16,7 +16,12 @@ public:
     void update();
     void render();
 
-    
+    void testPrint();
+    void setTile(int x, int y, std::string tileType);
+    void addTileType(std::string tileName, block tileBlock);
+    void removeTileType(std::string tileName);
+    std::string getTileInfo(int x, int y);
+    block getTileTypeInfo(std::string tileType);
 
 private:
 
